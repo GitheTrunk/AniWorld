@@ -1,4 +1,3 @@
-
 // JavaScript for Hero Carousel
 const carouselItems = document.querySelectorAll('.carousel-item');
 const carouselDots = document.querySelectorAll('.carousel-dot');
