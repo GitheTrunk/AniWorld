@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch - AniWorld</title>
+    <meta name="description" content="Continue watching your favorite anime on AniWorld.">
+    <link rel="icon" href="https://placehold.co/32x32/1A202C/E2E8F0?text=AR" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body class="bg-gray-900 text-gray-200 antialiased">
+    <!-- Main container -->
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-gray-800 p-4 shadow-lg fixed top-0 w-full z-50 rounded-b-xl">
+            <nav class="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center space-x-2">
+                    <img src="../assets/images/AniWorld.png" alt="AniWorld Logo"
+                        class="h-10 w-auto rounded-lg object-contain">
+                    <span class="text-xl font-bold text-white tracking-wider">AniWorld</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="../index.html"
+                        class="text-gray-300 hover:text-white transition-colors duration-200 font-medium px-3 py-2 rounded-lg">Home</a>
+                    <a href="#"
+                        class="text-gray-300 hover:text-white transition-colors duration-200 font-medium px-3 py-2 rounded-lg">Browse</a>
+                    <a href="#"
+                        class="text-gray-300 hover:text-white transition-colors duration-200 font-medium px-3 py-2 rounded-lg">My
+                        List</a>
+                    <a href="#"
+                        class="text-gray-300 hover:text-white transition-colors duration-200 font-medium px-3 py-2 rounded-lg">Community</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button aria-label="Search"
+                        class="text-gray-300 hover:text-white transition-colors duration-200 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <i class="fas fa-search text-xl"></i>
+                    </button>
+                    <button aria-label="Notifications"
+                        class="text-gray-300 hover:text-white transition-colors duration-200 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <i class="fas fa-bell text-xl"></i>
+                    </button>
+                    <div class="relative group" role="menu" aria-label="User profile menu">
+                        <button aria-haspopup="true" aria-expanded="false"
+                            class="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <img src="../assets/images/avatar.png" alt="User profile avatar"
+                                class="h-10 w-auto rounded-lg object-contain rounded-full border border-purple-500">
+                        </button>
+                        <div
+                            class="absolute right-0 mt-2 w-48 bg-gray-700 border border-gray-600 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition-all duration-300 invisible z-10 py-2">
+                            <a href="#"
+                                class="block px-4 py-2 text-gray-300 hover:bg-gray-600 hover:text-white rounded-md">My
+                                Profile</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-gray-300 hover:bg-gray-600 hover:text-white rounded-md">Settings</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-gray-300 hover:bg-gray-600 hover:text-white rounded-md">Watch
+                                History</a>
+                            <hr class="border-gray-600 my-1">
+                            <a href="#"
+                                class="block px-4 py-2 text-red-400 hover:bg-gray-600 hover:text-red-300 rounded-md">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="md:hidden text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-500 p-2 rounded-md"
+                    id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </nav>
+            <div id="mobile-menu"
+                class="hidden md:hidden fixed inset-0 bg-gray-900 bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-8 text-xl animate-fade-in-down">
+                <button class="absolute top-4 right-4 text-gray-300 hover:text-white p-2 rounded-full"
+                    id="close-mobile-menu">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                <a href="../index.html"
+                    class="text-gray-300 hover:text-white transition-colors duration-200 font-medium px-4 py-2 rounded-lg">Home</a>
+                <a href="#"
+                    class="text-gray-300 hover:text-white transition-colors duration-200 font-medium px-4 py-2 rounded-lg">Browse</a>
+                <a href="#"
+                    class="text-gray-300 hover:text-white transition-colors duration-200 font-medium px-4 py-2 rounded-lg">My
+                    List</a>
+                <a href="#"
+                    class="text-gray-300 hover:text-white transition-colors duration-200 font-medium px-4 py-2 rounded-lg">Community</a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow pt-20 pb-8">
+            <!-- Video Player Section -->
+            <section class="bg-gray-900 py-10">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div
+                        class="relative w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] bg-black rounded-xl overflow-hidden shadow-2xl">
+                        <video id="video-player" class="w-full h-full object-contain" controls preload="metadata"
+                            aria-describedby="video-title">
+                            <source src="../assets/videos/JJK_video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div id="video-title"
+                            class="absolute top-4 left-4 bg-gray-800 bg-opacity-70 px-3 py-1 rounded-lg text-white text-sm"
+                            aria-live="polite">
+                            Jujutsu Kaisen - Season 1, Episode 1
+                        </div>
+                    </div>
+                </div>
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+                    <h2 class="text-2xl font-semibold text-white mb-2">Jujutsu Kaisen - Episode 1</h2>
+                    <p class="text-gray-400 mb-4">In a world where cursed spirits feed on unsuspecting humans, the
+                        living must
+                        learn to fight back. Follow Yuji Itadori as he joins the Jujutsu Sorcerers to protect humanity.
+                    </p>
+                    <div class="flex items-center space-x-4" role="group" aria-label="Video controls">
+                        <button type="button"
+                            class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                            onclick="document.getElementById('video-player').play()">
+                            <i class="fas fa-play mr-2" aria-hidden="true"></i> Play
+                        </button>
+                        <button type="button"
+                            class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                            onclick="document.getElementById('video-player').pause()">
+                            <i class="fas fa-pause mr-2" aria-hidden="true"></i> Pause
+                        </button>
+                        <button type="button"
+                            class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                            onclick="document.getElementById('video-player').currentTime -= 10">
+                            <i class="fas fa-undo mr-2" aria-hidden="true"></i> Rewind
+                        </button>
+                        <button type="button"
+                            class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                            onclick="document.getElementById('video-player').currentTime += 10">
+                            <i class="fas fa-redo mr-2" aria-hidden="true"></i> Forward
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Related Anime -->
+            <section class="container mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+                <h3 class="text-3xl font-semibold mb-6 text-white">Related Anime</h3>
+                <div class="flex overflow-x-auto space-x-6 pb-4">
+                    <div
+                        class="anime-card flex-none w-48 bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
+                        <div class="relative">
+                            <img src="../assets/other/Jujutsu Kaisen.jpg" alt="Jujutsu Kaisen poster"
+                                class="w-full h-64 object-cover rounded-t-xl" loading="lazy">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-xl">
+                                <button class="text-white text-3xl"
+                                    onclick="window.location.href='watch.html?episode=1'"
+                                    aria-label="Watch Jujutsu Kaisen"><i class="fas fa-play-circle"></i></button>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-1 text-white truncate">Jujutsu Kaisen</h4>
+                            <p class="text-sm text-gray-400">Action, Supernatural</p>
+                            <div class="flex items-center text-yellow-400 text-sm mt-2">
+                                <i class="fas fa-star mr-1"></i> 4.8
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="anime-card flex-none w-48 bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
+                        <div class="relative">
+                            <img src="../assets/other/ChainsawMan.jpg" alt="Chainsaw Man poster"
+                                class="w-full h-64 object-cover rounded-t-xl" loading="lazy">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-xl">
+                                <button class="text-white text-3xl"
+                                    onclick="window.location.href='watch.html?episode=1'"
+                                    aria-label="Watch Chainsaw Man"><i class="fas fa-play-circle"></i></button>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-1 text-white truncate">Chainsaw Man</h4>
+                            <p class="text-sm text-gray-400">Action, Horror</p>
+                            <div class="flex items-center text-yellow-400 text-sm mt-2">
+                                <i class="fas fa-star mr-1"></i> 4.3
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="anime-card flex-none w-48 bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
+                        <div class="relative">
+                            <img src="../assets/other/Blue Lock.jpg" alt="Blue Lock poster"
+                                class="w-full h-64 object-cover rounded-t-xl" loading="lazy">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-xl">
+                                <button class="text-white text-3xl"
+                                    onclick="window.location.href='watch.html?episode=1'"
+                                    aria-label="Watch Blue Lock"><i class="fas fa-play-circle"></i></button>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-1 text-white truncate">Blue Lock</h4>
+                            <p class="text-sm text-gray-400">Sports, Drama</p>
+                            <div class="flex items-center text-yellow-400 text-sm mt-2">
+                                <i class="fas fa-star mr-1"></i> 4.5
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="anime-card flex-none w-48 bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
+                        <div class="relative">
+                            <img src="../assets/other/Naruto.jpg" alt="Naruto poster"
+                                class="w-full h-64 object-cover rounded-t-xl" loading="lazy">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-xl">
+                                <button class="text-white text-3xl"
+                                    onclick="window.location.href='watch.html?episode=1'" aria-label="Watch Naruto"><i
+                                        class="fas fa-play-circle"></i></button>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-1 text-white truncate">Naruto</h4>
+                            <p class="text-sm text-gray-400">Action, Comedy, Drama</p>
+                            <div class="flex items-center text-yellow-400 text-sm mt-2">
+                                <i class="fas fa-star mr-1"></i> 4.6
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="anime-card flex-none w-48 bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
+                        <div class="relative">
+                            <img src="../assets/other/Bleach.jpg" alt="Bleach poster"
+                                class="w-full h-64 object-cover rounded-t-xl" loading="lazy">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-xl">
+                                <button class="text-white text-3xl"
+                                    onclick="window.location.href='watch.html?episode=1'" aria-label="Watch Bleach"><i
+                                        class="fas fa-play-circle"></i></button>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-1 text-white truncate">Bleach</h4>
+                            <p class="text-sm text-gray-400">Action, Supernatural</p>
+                            <div class="flex items-center text-yellow-400 text-sm mt-2">
+                                <i class="fas fa-star mr-1"></i> 4.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 p-8 rounded-t-xl mt-12 shadow-inner">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8">
+                <div>
+                    <h5 class="text-xl font-semibold mb-4 text-white">About AniWorld</h5>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Your ultimate destination for all things anime. Discover new series, connect with fans, and dive
+                        into your favorite stories.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-xl font-semibold mb-4 text-white">Quick Links</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors duration-200 text-sm">FAQ</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors duration-200 text-sm">Support</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors duration-200 text-sm">Privacy
+                                Policy</a></li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors duration-200 text-sm">Terms of
+                                Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xl font-semibold mb-4 text-white">Follow Us</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200 text-2xl"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200 text-2xl"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200 text-2xl"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200 text-2xl"><i
+                                class="fab fa-reddit"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
+                © 2025 AniWorld. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

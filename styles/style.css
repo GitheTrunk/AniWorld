@@ -90,3 +90,39 @@ body {
     width: 100%;
     height: 100%;
 }
+/* Video Player */
+#video-player:focus {
+    outline: 2px solid #6B46C1;
+    outline-offset: 2px;
+}
+
+/* Mobile Menu Animation */
+.animate-fade-in-down {
+    animation: fade-in-down 0.3s ease-out forwards;
+}
+@keyframes fade-in-down {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Related Anime Scrollbar */
+.related-anime {
+    scrollbar-width: thin;
+    scrollbar-color: #6B46C1 #4A5568;
+}
+.related-anime::-webkit-scrollbar {
+    width: 8px;
+}
+.related-anime::-webkit-scrollbar-track {
+    background: #4A5568;
+}
+.related-anime::-webkit-scrollbar-thumb {
+    background-color: #6B46C1;
+    border-radius: 4px;
+}

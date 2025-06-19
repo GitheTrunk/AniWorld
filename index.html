@@ -146,7 +146,7 @@
                             <div class="relative">
                                 <img src="assets/other/Demon_Slayer.jpg" alt="Anime 1" class="w-full h-64 object-cover rounded-t-xl">
                                 <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-xl">
-                                    <button class="text-white text-3xl"><i class="fas fa-play-circle"></i></button>
+                                    <button class="text-white text-3xl" onclick="window.location.href='watch.html?anime=demon-slayer&episode=12'" aria-label="Watch Demon Slayer"><i class="fas fa-play-circle"></i></button>
                                 </div>
                             </div>
                             <div class="p-4">
@@ -222,6 +222,22 @@
                                     <div class="bg-purple-500 h-1.5 rounded-full" style="width: 10%;"></div>
                                 </div>
                                 <span class="text-xs text-gray-400">10% watched</span>
+                            </div>
+                        </div>
+                        <div class="anime-card flex-none w-48 bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
+                            <div class="relative">
+                                <img src="assets/other/Jujutsu Kaisen.jpg" alt="Jujutsu Kaisen poster" class="w-full h-64 object-cover rounded-t-xl" loading="lazy">
+                                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-xl">
+                                    <button onclick="window.location.href='watch.html'" class="text-white text-3xl" aria-label="Watch Jujutsu Kaisen"><i class="fas fa-play-circle"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-lg font-semibold mb-1 text-white truncate">Jujutsu Kaisen</h4>
+                                <p class="text-sm text-gray-400">Episode 1</p>
+                                <div class="w-full bg-gray-700 rounded-full h-2 mt-2">
+                                    <div class="bg-purple-600 h-2 rounded-full" style="width: 0%"></div> <!-- Adjust if you have progress -->
+                                </div>
+                                <p class="text-xs text-gray-500 mt-1">0% watched</p>
                             </div>
                         </div>
                     </div>
@@ -479,7 +495,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
-                &copy; 2024 AniWorld. All rights reserved.
+                &copy; 2025 AniWorld. All rights reserved.
             </div>
         </footer>
     </div>

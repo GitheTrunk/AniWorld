@@ -80,3 +80,37 @@ style.innerHTML = `
             }
         `;
 document.head.appendChild(style);
+
+// Watch Page Functionality (only run on watch.html)
+const videoPlayer = document.getElementById('video-player');
+const episodeTitle = document.querySelector('.absolute.top-4.left-4');
+
+if (videoPlayer) {
+    // Default to JJK video
+    const initialData = {
+        title: 'Jujutsu Kaisen',
+        episode: 1,
+        video: 'assets/videos/JJK_video.mp4',
+        poster: 'assets/other/Jujutsu Kaisen.jpg'
+    };
+
+    // Set initial video and progress
+    videoPlayer.src = initialData.video;
+    videoPlayer.poster = initialData.poster;
+    videoPlayer.currentTime = localStorage.getItem(`progress-${initialData.title.toLowerCase().replace(/ /g, '-')}-ep${initialData.episode}`) * videoPlayer.duration || 0;
+    episodeTitle.textContent = `${initialData.title} - Season 1, Episode ${initialData.episode}`;
+
+    // Track progress
+    videoPlayer.addEventListener('timeupdate', () => {
+        const progress = videoPlayer.currentTime / videoPlayer.duration;
+        localStorage.setItem(`progress-${initialData.title.toLowerCase().replace(/ /g, '-')}-ep${initialData.episode}`, progress);
+    });
+}
+
+// Add cursor pointer and click event to anime cards
+document.querySelectorAll('.anime-card').forEach(card => {
+  card.style.cursor = 'pointer';
+  card.addEventListener('click', () => {
+    window.location.href = 'screens/watch.html';
+  });
+});
