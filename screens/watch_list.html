@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - AniWorld</title>
+    <title>Watch List - AniWorld</title>
     <link rel="icon" href="../assets/images/AniWorld.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
@@ -82,23 +82,92 @@
                 </div>
                 <div class="flex justify-between items-center mb-4">
                     <a href="../screens/user_profile.html"
-                        class="text-yellow-400 hover:text-yellow-300 transition-colors duration-200">Profile</a>
+                        class="text-gray-300 hover:text-white transition-colors duration-200">Profile</a>
                     <a href="../screens/continue_watching.html" class="text-gray-300 hover:text-white transition-colors duration-200">Continue
                         Watching</a>
-                    <a href="../screens/watch_list.html" class="text-gray-300 hover:text-white transition-colors duration-200">Watch List</a>
+                    <a href="../screens/watch_list.html" class="text-yellow-400 hover:text-yellow-300 transition-colors duration-200">Watch List</a>
                     <a href="../screens/notification.html"
                         class="text-gray-300 hover:text-white transition-colors duration-200">Notification</a>
                     <a href="../screens/setting.html" class="text-gray-300 hover:text-white transition-colors duration-200">Settings</a>
                 </div>
                 <div class="bg-gray-900 p-4 rounded-lg">
                     <h3 class="text-xl font-semibold text-white mb-4 flex">
-                        <i class="fas fa-user mr-2"></i> Profile
+                        <i class="fas fa-heart mr-2"></i> Watch List
                     </h3>
-                    <div class="flex justify-between mb-4">
-                        <div class="flex space-x-4">
-
+                    
+                    <div class="flex overflow-x-auto space-x-6 pb-4">
+                        <div
+                            class="anime-card flex-none w-48 bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
+                            <div class="relative">
+                                <img src="../assets/other/Jujutsu Kaisen.jpg" alt="Poster 1"
+                                    class="w-full h-64 object-cover rounded-t-xl">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-xl">
+                                    <button class="text-white text-3xl"><i class="fas fa-play-circle"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-lg font-semibold mb-1 text-white truncate">Jujutsu Kaisen</h4>
+                                <p class="text-sm text-gray-400">Action, Demon, Supernatural</p>
+                                <div class="flex items-center text-yellow-400 text-sm mt-2">
+                                    <i class="fas fa-star mr-1"></i> 4.8
+                                </div>
+                            </div>
                         </div>
-
+                        <div
+                            class="anime-card flex-none w-48 bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
+                            <div class="relative">
+                                <img src="../assets/other/Naruto.jpg" alt="Poster 3"
+                                    class="w-full h-64 object-cover rounded-t-xl">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-xl">
+                                    <button class="text-white text-3xl"><i class="fas fa-play-circle"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-lg font-semibold mb-1 text-white truncate">Naruto</h4>
+                                <p class="text-sm text-gray-400">Action, Comedy, Drama, Advanture, Action figure</p>
+                                <div class="flex items-center text-yellow-400 text-sm mt-2">
+                                    <i class="fas fa-star mr-1"></i> 4.7
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="anime-card flex-none w-48 bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
+                            <div class="relative">
+                                <img src="../assets/other/One Piece.jpg" alt="Poster 2"
+                                    class="w-full h-64 object-cover rounded-t-xl">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-xl">
+                                    <button class="text-white text-3xl"><i class="fas fa-play-circle"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-lg font-semibold mb-1 text-white truncate">One Piece</h4>
+                                <p class="text-sm text-gray-400">Advanture, Fantasy, Comedy, Shounen</p>
+                                <div class="flex items-center text-yellow-400 text-sm mt-2">
+                                    <i class="fas fa-star mr-1"></i> 5.0
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="anime-card flex-none w-48 bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
+                            <div class="relative">
+                                <img src="../assets/other/Solo Leveling.jpg" alt="Poster 4"
+                                    class="w-full h-64 object-cover rounded-t-xl">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-xl">
+                                    <button class="text-white text-3xl"><i class="fas fa-play-circle"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-lg font-semibold mb-1 text-white truncate">Solo leveling</h4>
+                                <p class="text-sm text-gray-400">Action, Fantasy</p>
+                                <div class="flex items-center text-yellow-400 text-sm mt-2">
+                                    <i class="fas fa-star mr-1"></i> 4.6
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
