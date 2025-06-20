@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - AniWorld</title>
+    <link rel="icon" href="../assets/images/AniWorld.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="bg-gray-900 text-gray-200 antialiased">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-gray-800 p-4 shadow-lg fixed top-0 w-full z-50 rounded-b-xl">
+            <nav class="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center space-x-2">
+                    <img src="../assets/images/AniWorld.png" alt="AniWorld Logo"
+                        class="h-10 w-auto rounded-lg object-contain">
+                    <span class="text-xl font-bold text-white tracking-wider">AniWorld</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="../index.html"
+                        class="text-gray-300 hover:text-white transition-colors duration-200 font-medium px-3 py-2 rounded-lg">Home</a>
+                    <a href="#"
+                        class="text-gray-300 hover:text-white transition-colors duration-200 font-medium px-3 py-2 rounded-lg">Browse</a>
+                    <a href="#"
+                        class="text-gray-300 hover:text-white transition-colors duration-200 font-medium px-3 py-2 rounded-lg">My
+                        List</a>
+                    <a href="#"
+                        class="text-gray-300 hover:text-white transition-colors duration-200 font-medium px-3 py-2 rounded-lg">Community</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button aria-label="Search"
+                        class="text-gray-300 hover:text-white transition-colors duration-200 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <i class="fas fa-search text-xl"></i>
+                    </button>
+                    <button aria-label="Notifications"
+                        class="text-gray-300 hover:text-white transition-colors duration-200 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <i class="fas fa-bell text-xl"></i>
+                    </button>
+                    <div class="relative group" role="menu" aria-label="User profile menu">
+                        <button aria-haspopup="true" aria-expanded="false"
+                            class="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <img src="../assets/images/avatar.png" alt="User profile avatar"
+                                class="h-10 w-auto rounded-lg object-contain rounded-full border border-purple-500">
+                        </button>
+                        <div
+                            class="absolute right-0 mt-2 w-48 bg-gray-700 border border-gray-600 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition-all duration-300 invisible z-10 py-2">
+                            <a href="../screens/user_profile.html"
+                                class="block px-4 py-2 text-gray-300 hover:bg-gray-600 hover:text-white rounded-md">My
+                                Profile</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-gray-300 hover:bg-gray-600 hover:text-white rounded-md">Settings</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-gray-300 hover:bg-gray-600 hover:text-white rounded-md">Watch
+                                History</a>
+                            <hr class="border-gray-600 my-1">
+                            <a href="#"
+                                class="block px-4 py-2 text-red-400 hover:bg-gray-600 hover:text-red-300 rounded-md">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="md:hidden text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-500 p-2 rounded-md"
+                    id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </nav>
+        </header>
+        <!-- Main Content -->
+        <main class="flex-grow pt-24 pb-8 container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Notification Section -->
+            <section class="max-w-3xl mx-auto bg-gray-800 rounded-xl shadow-2xl p-6 mb-12 mt-6">
+                <div class="flex flex-col items-center mb-4">
+                    <img src="../assets/images/avatar.png" alt="User Avatar"
+                        class="h-16 w-16 rounded-full border-2 border-yellow-500 mb-2">
+                    <h2 class="text-2xl font-bold text-white">Hi, User</h2>
+                </div>
+                <div class="flex justify-between items-center mb-4">
+                    <a href="../screens/user_profile.html"
+                        class="text-gray-300 hover:text-white transition-colors duration-200">Profile</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">Continue
+                        Watching</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">Watch List</a>
+                    <a href="#"
+                        class="text-yellow-400 hover:text-yellow-300 transition-colors duration-200">Notification</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">Settings</a>
+                </div>
+                <div class="bg-gray-900 p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-white mb-4 flex">
+                        <i class="fas fa-bell mr-2"></i> Notification
+                    </h3>
+                    <div class="flex justify-between mb-4">
+                        <div class="flex space-x-4">
+                            <button class="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600">Anime
+                                (4)</button>
+                            <button class="text-gray-400 hover:text-white">Community</button>
+                        </div>
+                        <div>
+                            <button class="bg-teal-500 text-white px-4 py-2 rounded-lg hover:bg-teal-600 mr-2">Mark all
+                                as read</button>
+                            <button class="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600">Clear
+                                All</button>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-800 p-4 rounded-lg flex items-start">
+                            <img src="../assets/other/One Piece.jpg" alt="Anime Thumbnail"
+                                class="w-16 h-16 rounded-lg mr-4">
+                            <div>
+                                <p class="text-gray-400">4 days ago</p>
+                                <h4 class="text-lg font-semibold text-white">One Piece - Episode 133 [SUB] available
+                                    NOW!</h4>
+                                <p class="text-gray-400">Click here to watch it now</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg flex items-start">
+                            <img src="../assets/other/One Piece.jpg" alt="Anime Thumbnail"
+                                class="w-16 h-16 rounded-lg mr-4">
+                            <div>
+                                <p class="text-gray-400">11 days ago</p>
+                                <h4 class="text-lg font-semibold text-white">One Piece - Episode 132 [SUB] available
+                                    NOW!</h4>
+                                <p class="text-gray-400">Click here to watch it now</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg flex items-start">
+                            <img src="../assets/other/One Piece.jpg" alt="Anime Thumbnail"
+                                class="w-16 h-16 rounded-lg mr-4">
+                            <div>
+                                <p class="text-gray-400">18 days ago</p>
+                                <h4 class="text-lg font-semibold text-white">One Piece - Episode 131 [SUB] available
+                                    NOW!</h4>
+                                <p class="text-gray-400">Click here to watch it now</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg flex items-start">
+                            <img src="../assets/other/One Piece.jpg" alt="Anime Thumbnail"
+                                class="w-16 h-16 rounded-lg mr-4">
+                            <div>
+                                <p class="text-gray-400">25 days ago</p>
+                                <h4 class="text-lg font-semibold text-white">One Piece - Episode 130 [SUB] available
+                                    NOW!</h4>
+                                <p class="text-gray-400">Click here to watch it now</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-gray-800 p-8 rounded-t-xl mt-12 shadow-inner">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8">
+                <div>
+                    <h5 class="text-xl font-semibold mb-4 text-white">About AniWorld</h5>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Your ultimate destination for all things anime. Discover new series, connect with fans, and dive
+                        into your favorite stories.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-xl font-semibold mb-4 text-white">Quick Links</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors duration-200 text-sm">FAQ</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors duration-200 text-sm">Support</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors duration-200 text-sm">Privacy
+                                Policy</a></li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors duration-200 text-sm">Terms of
+                                Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xl font-semibold mb-4 text-white">Follow Us</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200 text-2xl"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200 text-2xl"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200 text-2xl"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200 text-2xl"><i
+                                class="fab fa-reddit"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
+                © 2025 AniWorld. All rights reserved.
+            </div>
+        </footer>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

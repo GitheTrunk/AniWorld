@@ -114,3 +114,19 @@ document.querySelectorAll('.anime-card').forEach(card => {
     window.location.href = 'screens/watch.html';
   });
 });
+
+// Add cursor pointer and click event to carousel buttons
+document.querySelectorAll('.carousel-item .btn-primary').forEach(btn => {
+  btn.addEventListener('click', () => {
+    window.location.href = 'screens/watch.html';
+  });
+});
+
+// Add cursor pointer and click event to bell (notification) 
+
+document.querySelectorAll('.fa-bell').forEach(notification => {
+    notification.style.cursor = 'pointer';
+    notification.addEventListener('click', () => {
+        window.location.href = '/screens/notification.html';
+    });
+});
