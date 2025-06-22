@@ -30,7 +30,7 @@
                     <a href="../screens/watch_list.html"
                         class="text-gray-300 hover:text-white transition-colors duration-200 font-medium px-3 py-2 rounded-lg">My
                         List</a>
-                    <a href="#"
+                    <a href="../screens/community.html"
                         class="text-gray-300 hover:text-white transition-colors duration-200 font-medium px-3 py-2 rounded-lg">Community</a>
                 </div>
                 <div class="flex items-center space-x-4">
@@ -90,16 +90,100 @@
                         class="text-gray-300 hover:text-white transition-colors duration-200">Notification</a>
                     <a href="../screens/setting.html" class="text-yellow-400 hover:text-yellow-300 transition-colors duration-200">Settings</a>
                 </div>
-                <div class="bg-gray-900 p-4 rounded-lg">
-                    <h3 class="text-xl font-semibold text-white mb-4 flex">
-                        <i class="fas fa-gear mr-2"></i> Settings
+                <div class="bg-gray-900 p-4 rounded-lg mb-8">
+                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
+                        <i class="fas fa-bell mr-2 text-yellow-400"></i> Notification & Playback Settings
                     </h3>
-                    <div class="flex justify-between mb-4">
-                        <div class="flex space-x-4">
-
+                    <form class="space-y-6">
+                        <div class="flex items-center justify-between">
+                            <label for="auto-next" class="text-gray-200 font-medium flex items-center">
+                                <i class="fas fa-step-forward mr-2 text-yellow-400"></i>
+                                Auto Next Episode
+                            </label>
+                            <button type="button" id="auto-next" class="relative inline-flex items-center h-6 rounded-full w-11 bg-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-colors duration-200" aria-pressed="false" onclick="toggleSwitch(this)">
+                                <span class="sr-only">Enable Auto Next</span>
+                                <span class="inline-block h-5 w-5 transform bg-yellow-400 rounded-full transition-transform duration-200 translate-x-1"></span>
+                            </button>
                         </div>
-
-                    </div>
+                        <div class="flex items-center justify-between">
+                            <label for="auto-play" class="text-gray-200 font-medium flex items-center">
+                                <i class="fas fa-play mr-2 text-green-400"></i>
+                                Auto Play
+                            </label>
+                            <button type="button" id="auto-play" class="relative inline-flex items-center h-6 rounded-full w-11 bg-gray-700 focus:outline-none focus:ring-2 focus:ring-green-400 transition-colors duration-200" aria-pressed="false" onclick="toggleSwitch(this)">
+                                <span class="sr-only">Enable Auto Play</span>
+                                <span class="inline-block h-5 w-5 transform bg-green-400 rounded-full transition-transform duration-200 translate-x-1"></span>
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <label for="skip-intro" class="text-gray-200 font-medium flex items-center">
+                                <i class="fas fa-forward mr-2 text-blue-400"></i>
+                                Skip Intro
+                            </label>
+                            <button type="button" id="skip-intro" class="relative inline-flex items-center h-6 rounded-full w-11 bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors duration-200" aria-pressed="false" onclick="toggleSwitch(this)">
+                                <span class="sr-only">Enable Skip Intro</span>
+                                <span class="inline-block h-5 w-5 transform bg-blue-400 rounded-full transition-transform duration-200 translate-x-1"></span>
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <label for="language" class="text-gray-200 font-medium flex items-center">
+                                <i class="fas fa-language mr-2 text-purple-400"></i>
+                                Language
+                            </label>
+                            <select id="language" class="bg-gray-800 text-gray-200 rounded-lg px-3 py-1 focus:outline-none focus:ring-2 focus:ring-purple-400">
+                                <option value="en">English</option>
+                                <option value="jp">Japanese</option>
+                                <option value="fr">French</option>
+                                <option value="es">Spanish</option>
+                            </select>
+                        </div>
+                        <hr class="border-gray-700 my-4">
+                        <div class="flex items-center justify-between">
+                            <label for="notify-new-episode" class="text-gray-200 font-medium flex items-center">
+                                <i class="fas fa-film mr-2 text-blue-400"></i>
+                                Notify on New Episodes
+                            </label>
+                            <button type="button" id="notify-new-episode" class="relative inline-flex items-center h-6 rounded-full w-11 bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors duration-200" aria-pressed="false" onclick="toggleSwitch(this)">
+                                <span class="sr-only">Enable New Episode Notifications</span>
+                                <span class="inline-block h-5 w-5 transform bg-blue-400 rounded-full transition-transform duration-200 translate-x-1"></span>
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <label for="notify-watchlist" class="text-gray-200 font-medium flex items-center">
+                                <i class="fas fa-list mr-2 text-green-400"></i>
+                                Watchlist Updates
+                            </label>
+                            <button type="button" id="notify-watchlist" class="relative inline-flex items-center h-6 rounded-full w-11 bg-gray-700 focus:outline-none focus:ring-2 focus:ring-green-400 transition-colors duration-200" aria-pressed="false" onclick="toggleSwitch(this)">
+                                <span class="sr-only">Enable Watchlist Updates</span>
+                                <span class="inline-block h-5 w-5 transform bg-green-400 rounded-full transition-transform duration-200 translate-x-1"></span>
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <label for="notify-community" class="text-gray-200 font-medium flex items-center">
+                                <i class="fas fa-users mr-2 text-purple-400"></i>
+                                Community Messages
+                            </label>
+                            <button type="button" id="notify-community" class="relative inline-flex items-center h-6 rounded-full w-11 bg-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-colors duration-200" aria-pressed="false" onclick="toggleSwitch(this)">
+                                <span class="sr-only">Enable Community Messages</span>
+                                <span class="inline-block h-5 w-5 transform bg-purple-400 rounded-full transition-transform duration-200 translate-x-1"></span>
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <label for="notify-promotions" class="text-gray-200 font-medium flex items-center">
+                                <i class="fas fa-gift mr-2 text-pink-400"></i>
+                                Promotions & Offers
+                            </label>
+                            <button type="button" id="notify-promotions" class="relative inline-flex items-center h-6 rounded-full w-11 bg-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-400 transition-colors duration-200" aria-pressed="false" onclick="toggleSwitch(this)">
+                                <span class="sr-only">Enable Promotions & Offers</span>
+                                <span class="inline-block h-5 w-5 transform bg-pink-400 rounded-full transition-transform duration-200 translate-x-1"></span>
+                            </button>
+                        </div>
+                        <div class="flex justify-end">
+                            <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold px-6 py-2 rounded-lg shadow transition-colors duration-200">
+                                Save Preferences
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </section>
         </main>

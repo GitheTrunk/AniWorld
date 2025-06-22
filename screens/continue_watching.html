@@ -30,7 +30,7 @@
                     <a href="../screens/watch_list.html"
                         class="text-gray-300 hover:text-white transition-colors duration-200 font-medium px-3 py-2 rounded-lg">My
                         List</a>
-                    <a href="#"
+                    <a href="../screens/community.html"
                         class="text-gray-300 hover:text-white transition-colors duration-200 font-medium px-3 py-2 rounded-lg">Community</a>
                 </div>
                 <div class="flex items-center space-x-4">
@@ -83,22 +83,144 @@
                 <div class="flex justify-between items-center mb-4">
                     <a href="../screens/user_profile.html"
                         class="text-gray-300 hover:text-white transition-colors duration-200">Profile</a>
-                    <a href="../screens/continue_watching.html" class="text-yellow-400 hover:text-yellow-300 transition-colors duration-200">Continue
+                    <a href="../screens/continue_watching.html"
+                        class="text-yellow-400 hover:text-yellow-300 transition-colors duration-200">Continue
                         Watching</a>
-                    <a href="../screens/watch_list.html" class="text-gray-300 hover:text-white transition-colors duration-200">Watch List</a>
+                    <a href="../screens/watch_list.html"
+                        class="text-gray-300 hover:text-white transition-colors duration-200">Watch List</a>
                     <a href="../screens/notification.html"
                         class="text-gray-300 hover:text-white transition-colors duration-200">Notification</a>
-                    <a href="../screens/setting.html" class="text-gray-300 hover:text-white transition-colors duration-200">Settings</a>
+                    <a href="../screens/setting.html"
+                        class="text-gray-300 hover:text-white transition-colors duration-200">Settings</a>
                 </div>
                 <div class="bg-gray-900 p-4 rounded-lg">
                     <h3 class="text-xl font-semibold text-white mb-4 flex">
                         <i class="fas fa-redo mr-2"></i> Continue Watching
                     </h3>
-                    <div class="flex justify-between mb-4">
-                        <div class="flex space-x-4">
-
+                    <div class="flex overflow-x-auto space-x-6 pb-4">
+                        <div
+                            class="anime-card flex-none w-52 bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
+                            <div class="relative">
+                                <img src="../assets/other/Demon_Slayer.jpg" alt="Anime 1"
+                                    class="w-full h-64 object-cover rounded-t-xl">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-xl">
+                                    <button class="text-white text-3xl"
+                                        onclick="window.location.href='watch.html?anime=demon-slayer&episode=12'"
+                                        aria-label="Watch Demon Slayer"><i class="fas fa-play-circle"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-lg font-semibold mb-2 text-white">Dragon Slayer: A New Era</h4>
+                                <p class="text-sm text-gray-400 mb-3">Episode 12</p>
+                                <div class="w-full bg-gray-700 rounded-full h-1.5 mb-2">
+                                    <div class="bg-purple-500 h-1.5 rounded-full" style="width: 75%;"></div>
+                                </div>
+                                <span class="text-xs text-gray-400">75% watched</span>
+                            </div>
                         </div>
-
+                        <div
+                            class="anime-card flex-none w-52 bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
+                            <div class="relative">
+                                <img src="../assets/other/Blue Lock.jpg" alt="Anime 2"
+                                    class="w-full h-64 object-cover rounded-t-xl">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-xl">
+                                    <button onclick="window.location.href='watch.html'" class="text-white text-3xl"><i
+                                            class="fas fa-play-circle"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-lg font-semibold mb-2 text-white">Blue Lock</h4>
+                                <p class="text-sm text-gray-400 mb-3">Episode 5</p>
+                                <div class="w-full bg-gray-700 rounded-full h-1.5 mb-2">
+                                    <div class="bg-purple-500 h-1.5 rounded-full" style="width: 30%;"></div>
+                                </div>
+                                <span class="text-xs text-gray-400">30% watched</span>
+                            </div>
+                        </div>
+                        <!-- Add more continue watching cards as needed -->
+                        <div
+                            class="anime-card flex-none w-52 bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
+                            <div class="relative">
+                                <img src="../assets/other/ChainsawMan.jpg" alt="Anime 3"
+                                    class="w-full h-64 object-cover rounded-t-xl">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-xl">
+                                    <button onclick="window.location.href='watch.html'" class="text-white text-3xl"><i
+                                            class="fas fa-play-circle"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-lg font-semibold mb-2 text-white">Chainsaw Man</h4>
+                                <p class="text-sm text-gray-400 mb-3">Episode 1</p>
+                                <div class="w-full bg-gray-700 rounded-full h-1.5 mb-2">
+                                    <div class="bg-purple-500 h-1.5 rounded-full" style="width: 10%;"></div>
+                                </div>
+                                <span class="text-xs text-gray-400">10% watched</span>
+                            </div>
+                        </div>
+                        <div
+                            class="anime-card flex-none w-52 bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
+                            <div class="relative">
+                                <img src="../assets/other/Naruto.jpg" alt="Anime 4"
+                                    class="w-full h-64 object-cover rounded-t-xl">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-xl">
+                                    <button onclick="window.location.href='watch.html'" class="text-white text-3xl"><i
+                                            class="fas fa-play-circle"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-lg font-semibold mb-2 text-white">Naruto</h4>
+                                <p class="text-sm text-gray-400 mb-3">Episode 8</p>
+                                <div class="w-full bg-gray-700 rounded-full h-1.5 mb-2">
+                                    <div class="bg-purple-500 h-1.5 rounded-full" style="width: 50%;"></div>
+                                </div>
+                                <span class="text-xs text-gray-400">50% watched</span>
+                            </div>
+                        </div>
+                        <div
+                            class="anime-card flex-none w-52 bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
+                            <div class="relative">
+                                <img src="../assets/other/Bleach.jpg" alt="Anime 3"
+                                    class="w-full h-64 object-cover rounded-t-xl">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-xl">
+                                    <button onclick="window.location.href='watch.html'" class="text-white text-3xl"><i
+                                            class="fas fa-play-circle"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-lg font-semibold mb-2 text-white">Bleach</h4>
+                                <p class="text-sm text-gray-400 mb-3">Episode 1</p>
+                                <div class="w-full bg-gray-700 rounded-full h-1.5 mb-2">
+                                    <div class="bg-purple-500 h-1.5 rounded-full" style="width: 10%;"></div>
+                                </div>
+                                <span class="text-xs text-gray-400">10% watched</span>
+                            </div>
+                        </div>
+                        <div
+                            class="anime-card flex-none w-48 bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
+                            <div class="relative">
+                                <img src="../assets/other/Jujutsu Kaisen.jpg" alt="Jujutsu Kaisen poster"
+                                    class="w-full h-64 object-cover rounded-t-xl" loading="lazy">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-xl">
+                                    <button onclick="window.location.href='watch.html'" class="text-white text-3xl"
+                                        aria-label="Watch Jujutsu Kaisen"><i class="fas fa-play-circle"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-lg font-semibold mb-1 text-white truncate">Jujutsu Kaisen</h4>
+                                <p class="text-sm text-gray-400">Episode 1</p>
+                                <div class="w-full bg-gray-700 rounded-full h-2 mt-2">
+                                    <div class="bg-purple-600 h-2 rounded-full" style="width: 0%"></div>
+                                    <!-- Adjust if you have progress -->
+                                </div>
+                                <p class="text-xs text-gray-500 mt-1">0% watched</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

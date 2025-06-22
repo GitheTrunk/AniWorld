@@ -109,17 +109,17 @@ if (videoPlayer) {
 
 // Add cursor pointer and click event to anime cards
 document.querySelectorAll('.anime-card').forEach(card => {
-  card.style.cursor = 'pointer';
-  card.addEventListener('click', () => {
-    window.location.href = 'screens/watch.html';
-  });
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', () => {
+        window.location.href = 'screens/watch.html';
+    });
 });
 
 // Add cursor pointer and click event to carousel buttons
 document.querySelectorAll('.carousel-item .btn-primary').forEach(btn => {
-  btn.addEventListener('click', () => {
-    window.location.href = 'screens/watch.html';
-  });
+    btn.addEventListener('click', () => {
+        window.location.href = 'screens/watch.html';
+    });
 });
 
 // Add cursor pointer and click event to bell (notification) 
@@ -130,3 +130,16 @@ document.querySelectorAll('.fa-bell').forEach(notification => {
         window.location.href = '/screens/notification.html';
     });
 });
+
+function toggleSwitch(btn) {
+    const pressed = btn.getAttribute('aria-pressed') === 'true';
+    btn.setAttribute('aria-pressed', !pressed);
+    const knob = btn.querySelector('span.inline-block');
+    if (!pressed) {
+        knob.classList.add('translate-x-5');
+        knob.classList.remove('translate-x-1');
+    } else {
+        knob.classList.remove('translate-x-5');
+        knob.classList.add('translate-x-1');
+    }
+}
